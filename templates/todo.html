@@ -1,0 +1,29 @@
+<h1>All Task</h1>
+
+<head>
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        h2 {
+            color: aqua
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VIEW TASK</h1>
+    {%for eachtask in AllTasks%}
+
+    <button>{{eachtask}}</button>
+    {%endfor%}
+    <form method="post">
+        <h2>Delete_a_Task</h2>
+        <input name="DeleteTask">
+        <button>DeleteTask</button>
+    </form>
+
+    <a href="/Addtask">AddTask</a>
+
+</body>

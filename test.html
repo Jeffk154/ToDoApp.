@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mystery Number Game</title>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center font-sans">
+
+    <div class="bg-white p-8 rounded-3xl shadow-2xl w-96 text-center transform transition-all hover:scale-105">
+        <h1 class="text-3xl font-extrabold text-gray-800 mb-2">Guess the 🧐</h1>
+        <p class="text-gray-500 mb-6">Pick a number between 1 and 100</p>
+
+        <div id="message" class="bg-gray-100 py-3 rounded-xl mb-6 font-bold text-indigo-600 tracking-wide">
+            Good Luck!
+        </div>
+
+        <input type="number" id="userGuess" class="w-full p-4 border-2 border-indigo-200 rounded-2xl text-center text-2xl mb-4 focus:outline-none focus:border-indigo-500 transition-colors" placeholder="??">
+
+        <button onclick="checkGuess()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl shadow-lg transition-transform active:scale-95">
+            CHECK GUESS
+        </button>
+
+        <div class="mt-6 flex justify-between text-sm font-semibold text-gray-400">
+            <span>Attempts: <span id="attempts" class="text-indigo-600">0</span></span>
+            <span>Lives: <span id="lives" class="text-pink-500">10</span></span>
+        </div>
+
+        <button onclick="resetGame()" class="mt-8 text-indigo-400 hover:text-indigo-600 text-xs font-bold uppercase tracking-widest">
+            Reset Game
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"e3c1c9af36de41759418005494a48906","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
