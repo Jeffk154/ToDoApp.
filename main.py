@@ -4,7 +4,7 @@ AllTasks = ["Ride Bicycle" , "Play Hide And" , "Sleep"]
 
 app = flask.Flask("ToDoApp")
 
-@app.route("/viewtasks" , methods=["GET" , "POST"])
+@app.route("/" , methods=["GET" , "POST"])
 def viewtask():
     if flask.request.method == "POST":
         print("Deleted Task")
